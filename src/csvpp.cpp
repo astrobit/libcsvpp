@@ -139,8 +139,10 @@ void csvpp::csv::parse_csv(const char * i_sFilename,const char * i_sTokens, cons
 }
 
 
-csv csvpp::parse_csv(const char * i_sFilename,const char * i_sTokens, const char * i_sStringDelim, bool i_bIgnore_Whitespace, bool i_bPreserve_String_Delim)
+csvpp::csv csvpp::parse_csv(const char * i_sFilename,const char * i_sTokens, const char * i_sStringDelim, bool i_bIgnore_Whitespace, bool i_bPreserve_String_Delim)
 {
-	return (csv().parse_csv(i_sFilename,i_sTokens, i_sStringDelim, i_bIgnore_Whitespace, i_bPreserve_String_Delim));
+	csvpp::csv cRet;
+	cRet.parse_csv(i_sFilename,i_sTokens, i_sStringDelim, i_bIgnore_Whitespace, i_bPreserve_String_Delim);
+	return cRet;
 }
 
