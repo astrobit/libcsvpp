@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>csvpp.js test</title>
+	</head>
+    <body>
+        <script type="text/javascript" src="../src/csvpp.js"></script>
+        <script type="text/javascript">
+        
+document.write(csvpp_trim_whitespace("     abc     ") + "</br>");
+var mycsv = new CSV();
+mycsv.parse_csv("1,2,3\na,b,c\n\"a,b\",c,d\n",",","\"",true,false);
+
+document.write(mycsv._vData[0] + "</br>");
+
+document.write(mycsv.at(0,0) + "</br>");
+document.write(mycsv.at(0,1) + "</br>");
+document.write(mycsv.at(0,2) + "</br>");
+
+document.write(mycsv.at(1,0) + "</br>");
+document.write(mycsv.at(1,1) + "</br>");
+document.write(mycsv.at(1,2) + "</br>");
+
+document.write(mycsv.at(2,0) + "</br>");
+document.write(mycsv.at(2,1) + "</br>");
+document.write(mycsv.at(2,2) + "</br>");
+		</script>
+	</body>
+</html>
+
